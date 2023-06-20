@@ -66,9 +66,6 @@ with psycopg2.connect(database="client", user="postgres", password="password") a
 
         # 2) Функция, позволяющая добавить нового клиента.
 
-        # # Добавим без функции
-
-
         def add_client(cursor, first_name, last_name, email):
             cursor.execute("""
             INSERT INTO clients (first_name, last_name, email )
